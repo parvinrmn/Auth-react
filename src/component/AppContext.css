@@ -12,7 +12,7 @@
     display: flex;
 }
 .box{
-    border:1px solid;
+    border:1px solid black;
     margin:0.1rem 0.3rem;
     padding:1rem;
 }

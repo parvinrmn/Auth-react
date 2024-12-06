@@ -4,23 +4,22 @@ import SideBar from './SideBar'
 import Home from './Home'
 import Footer from './Footer'
 import './AppContext.css'
-import {themes} from './themeContext'
-
+import ThemeContext,{themes} from './themeContext'
 
 
 export default function AppContext() {
   const [theme, setTheme] = useState(themes.dark)
 
   return (
-    <div>
+    <ThemeContext.Provider value={theme}>
       <button onClick={()=>setTheme(theme=== themes.light ? themes.dark : themes.light)}>
         {theme === themes.dark? "dark":"light"}</button>
-      <Head theme={theme}/>
+      <Head/>
       <section className='main'>
         <SideBar theme={theme}/>
         <Home theme={theme}/>
       </section>
       <Footer theme={theme}/>
-    </div>
+    </ThemeContext.Provider>
   )
 }

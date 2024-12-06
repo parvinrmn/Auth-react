@@ -5,3 +5,8 @@ export const themes = {
     light:"lightThem"
     
   }
+
+  const ThemeContext = React.createContext();
+  export default ThemeContext;
+
+  
