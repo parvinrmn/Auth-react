@@ -1,0 +1,31 @@
+.darkTheme{
+    color: #fff;
+    background: #222;
+
+}
+.lightTheme{
+    color:#222;
+    background: #eee ;
+}
+
+.main{
+    display: flex;
+}
+.box{
+    border:1px solid;
+    margin:0.1rem 0.3rem;
+    padding:1rem;
+}
+li{
+    list-style: none;
+    padding: 0;
+    margin:0
+}
+ul{
+    padding:0;
+    margin:0
+}
+header{
+    display: flex;
+    justify-content: center;
+}
