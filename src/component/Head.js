@@ -1,14 +1,25 @@
 import React, { useContext } from 'react'
-import ThemeContext from './themeContext'
+import ThemeContext from './contexts/themeContext'
 // import SampleContext from './SampleContext'
+import userContext from './contexts/userContext'
 
 export default function Head() {
 
-  const theme = useContext(ThemeContext.Consumer)
+  const theme = useContext(ThemeContext)
+   const [user , isLoggedIn,login,logOut]=useContext(userContext)
+  
   return (
     <div>
       <header className={`box ${theme}`}>
-        head
+        <h2>Header</h2>
+        {isLoggedIn && <span>{user.name}</span> }
+        {
+          isLoggedIn ? <span onClick={logOut}>Logount</span>
+          : <span onClick={login} className='action'>
+            Login
+            </span>
+        }
+       
       </header>
     </div>
   )

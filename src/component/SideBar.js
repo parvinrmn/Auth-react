@@ -6,6 +6,8 @@ export default function SideBar({theme}) {
       <h4>SideBar</h4>
       <ul>
         <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
       </ul>
     </div>
   )
